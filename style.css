@@ -13,3 +13,5 @@
 /* Keep the outgoing frame visible until the next player starts. */
 .background-video iframe{opacity:0;z-index:0;transition:opacity .3s ease}.background-video iframe.is-active{opacity:1;z-index:1}
 @media(prefers-reduced-motion:reduce){.background-video iframe{transition:none}}
+
+.organizer-note{margin:0;padding:18px 24px;text-align:center;font-size:16px;line-height:1.7;color:var(--muted)}.history-photo{margin:24px 0 0}.history-photo img{display:block;width:100%;height:auto;border-radius:8px}.history-photo figcaption{margin-top:10px;font-size:14px;line-height:1.6;color:var(--muted)}

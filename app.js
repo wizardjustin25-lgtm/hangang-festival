@@ -2,7 +2,7 @@ const tabs=[...document.querySelectorAll('[role="tab"]')];
 let bgReady=false,bgWanted=!matchMedia('(prefers-reduced-motion: reduce)').matches,bgIndex=0,bgTimer=null;
 // Arbitrary preview selections, authorized by the owner; not visually reviewed highlights.
 const bgClips=[
-{id:'KJkGgpmM3WE',start:45,label:'제4회 · 뮤지컬 갈라 콘서트'},
+{id:'rzF0myPIKQY',start:182,label:'제4회 · 김신의 Gethsemane'},
 {id:'u8jdomMXlRc',start:900,label:'제3회 · 기쁜 소식의 노래'},
 {id:'gPMNHL3W1Zc',start:600,label:'제2회 · 한강문화축제'},
 {id:'KJkGgpmM3WE',start:120,label:'제4회 · 뮤지컬 갈라 콘서트'},
