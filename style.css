@@ -27,3 +27,6 @@ body{background:#fffaf7}.hero-strip{background:#102e4c}nav button[aria-selected=
 
 /* Detailed performer biographies */
 .artists .artist-bio-detailed{text-align:left;padding:16px 20px 0;line-height:1.8}.artists .artist-bio-detailed>strong{text-align:center}.artist-bio-detailed h5{font-family:Pretendard,sans-serif;font-weight:700;font-size:14px;letter-spacing:0;margin:22px 0 9px;color:#183348}.artist-bio-detailed ul{padding-left:18px;margin:0;color:#607087;font-size:14px}.artist-bio-detailed li{margin:0 0 10px;word-break:keep-all;overflow-wrap:anywhere}.artists .artist-bio-detailed p{line-height:1.8}.bio-sources{margin-top:20px;padding-top:12px;border-top:1px solid #e6d9d0;font-size:12px;color:#607087}.bio-sources summary{cursor:pointer}.bio-sources a{display:block;margin-top:8px;color:#183348;text-decoration:underline;text-underline-offset:3px}@media(max-width:760px){.artists{grid-template-columns:1fr}.artists .artist-bio-detailed{padding:16px 22px 0}.artists .artist-photo{max-height:480px}.artist-bio-detailed li,.artists .artist-bio-detailed p{font-size:15px}}
+
+/* Match video controls to the surrounding navy strip. */
+.background-controls{background:#102e4c;box-shadow:none}.background-controls button{background:transparent;box-shadow:none}
