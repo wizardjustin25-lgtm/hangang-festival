@@ -13,7 +13,7 @@ let activeDeck=0,pendingDeck=null,hasStarted=false;
 const hero=document.querySelector('.poster-hero'),bgButton=document.getElementById('background-toggle'),bgLabel=document.getElementById('background-label');
 const webOrigin=/^https?:$/.test(location.protocol)?location.origin:null;
 function sendPause(frame){if(frame.contentWindow)frame.contentWindow.postMessage(JSON.stringify({event:'command',func:'pauseVideo',args:[]}),'https://www.youtube-nocookie.com')}
-function bgAllowed(){return bgWanted&&!document.hidden&&document.getElementById('history').hidden}
+function bgAllowed(){return bgWanted&&!document.hidden}
 function refreshBg(){
  if(!bgReady)return;
  if(bgAllowed()){
@@ -53,6 +53,6 @@ window.onYouTubeIframeAPIReady=function(){decks.forEach((d,slot)=>{
  }else if(e.data===0&&slot===activeDeck&&bgAllowed())nextClip()},
  onAutoplayBlocked(){failBackground()},onError(){failBackground()}
  }})})};
-bgButton.addEventListener('click',()=>{if(!bgReady){bgLabel.textContent='연혁에서 공연 영상을 만나보세요';return}bgWanted=!hero.classList.contains('video-playing');if(bgWanted&&!document.getElementById('history').hidden){select('greeting');try{history.replaceState(null,'','#greeting')}catch{}}refreshBg()});
+bgButton.addEventListener('click',()=>{if(!bgReady){bgLabel.textContent='연혁에서 공연 영상을 만나보세요';return}bgWanted=!hero.classList.contains('video-playing');refreshBg()});
 document.addEventListener('visibilitychange',refreshBg);
 const youtubeScript=document.createElement('script');youtubeScript.src='https://www.youtube.com/iframe_api';youtubeScript.async=true;youtubeScript.onerror=()=>{bgState(false);bgLabel.textContent='연혁에서 공연 영상을 만나보세요'};document.head.appendChild(youtubeScript);
