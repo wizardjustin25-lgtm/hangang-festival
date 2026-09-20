@@ -33,4 +33,7 @@ body{background:#fffaf7}.hero-strip{background:#102e4c}nav button[aria-selected=
 /* Balanced title spacing on a continuous, flat navy surface. */
 header,.poster-hero,.video-heading,.hero-strip,.background-controls{background:#10365a;border-color:transparent;box-shadow:none}
 .poster-hero:not(.video-playing) .poster-title{width:min(100%,950px);max-width:950px;aspect-ratio:1499/1190;background:#10365a;isolation:isolate}
-.poster-hero:not(.video-playing) .poster-title img{width:100%;height:auto;mix-blend-mode:lighten}
+.poster-hero:not(.video-playing) .poster-title img{width:100%;height:auto;mix-blend-mode:lighten}/* Special guest emphasis. */
+.artists article.special-guest{border:2px solid #183348;border-top:6px solid #183348;background:#fff3e8}
+.artists .special-guest .special-guest-label{display:table;margin:20px auto 12px;padding:5px 18px;background:#183348;color:#fff3e8;border-radius:4px;font-size:15px;font-weight:800;letter-spacing:.04em}
+.artists .special-guest h4{font-size:30px;margin-top:8px;color:#102e4c}
