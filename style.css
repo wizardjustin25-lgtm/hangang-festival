@@ -37,3 +37,6 @@ header,.poster-hero,.video-heading,.hero-strip,.background-controls{background:#
 .artists article.special-guest{border:2px solid #183348;border-top:2px solid #183348;background:#fff3e8}
 .artists .special-guest .special-guest-label{display:table;margin:20px auto 12px;padding:5px 18px;background:#183348;color:#fff3e8;border-radius:4px;font-size:15px;font-weight:800;letter-spacing:.04em}
 .artists .special-guest h4{font-size:30px;margin-top:8px;color:#102e4c}
+.back-to-top{display:flex;justify-content:center;margin-top:48px;padding-top:24px;border-top:1px solid #e6d9d0}
+.back-to-top button{font:inherit;font-weight:600;color:#fffaf7;background:#183348;border:1px solid #183348;border-radius:4px;padding:12px 28px;cursor:pointer}
+.back-to-top button:hover{background:#294b66}
