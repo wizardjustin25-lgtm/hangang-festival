@@ -40,3 +40,7 @@ header,.poster-hero,.video-heading,.hero-strip,.background-controls{background:#
 .back-to-top{display:flex;justify-content:center;margin-top:48px;padding-top:24px;border-top:1px solid #e6d9d0}
 .back-to-top button{font:inherit;font-weight:600;color:#fffaf7;background:#183348;border:1px solid #183348;border-radius:4px;padding:12px 28px;cursor:pointer}
 .back-to-top button:hover{background:#294b66}
+/* Center the event details; keep playback control on its own row. */
+.hero-strip{justify-content:center;align-items:center;text-align:center;padding:20px 24px 76px}
+.background-controls{right:auto;left:50%;transform:translateX(-50%);bottom:14px;white-space:nowrap}
+@media(max-width:760px){.hero-strip{align-items:center;justify-content:center;text-align:center;padding:16px 16px 64px}.background-controls{right:auto;left:50%;bottom:12px}}
