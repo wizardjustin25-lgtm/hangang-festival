@@ -56,3 +56,5 @@ window.onYouTubeIframeAPIReady=function(){decks.forEach((d,slot)=>{
 bgButton.addEventListener('click',()=>{if(!bgReady){bgLabel.textContent='연혁에서 공연 영상을 만나보세요';return}bgWanted=!hero.classList.contains('video-playing');refreshBg()});
 document.addEventListener('visibilitychange',refreshBg);
 const youtubeScript=document.createElement('script');youtubeScript.src='https://www.youtube.com/iframe_api';youtubeScript.async=true;youtubeScript.onerror=()=>{bgState(false);bgLabel.textContent='연혁에서 공연 영상을 만나보세요'};document.head.appendChild(youtubeScript);
+
+document.querySelectorAll('[data-back-to-top]').forEach(button=>button.addEventListener('click',()=>{window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}));
