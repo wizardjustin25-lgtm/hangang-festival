@@ -57,4 +57,4 @@ bgButton.addEventListener('click',()=>{if(!bgReady){bgLabel.textContent='연혁�
 document.addEventListener('visibilitychange',refreshBg);
 const youtubeScript=document.createElement('script');youtubeScript.src='https://www.youtube.com/iframe_api';youtubeScript.async=true;youtubeScript.onerror=()=>{bgState(false);bgLabel.textContent='연혁에서 공연 영상을 만나보세요'};document.head.appendChild(youtubeScript);
 
-document.querySelectorAll('[data-back-to-top]').forEach(button=>button.addEventListener('click',()=>{window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}));
+document.querySelectorAll('[data-back-to-top]').forEach(button=>button.addEventListener('click',()=>{const panel=button.closest('section');if(!panel)return;const nav=document.querySelector('nav');const offset=nav?nav.getBoundingClientRect().height:0;window.scrollTo({top:Math.max(0,window.scrollY+panel.getBoundingClientRect().top-offset-16),behavior:'instant'});}));
