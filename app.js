@@ -58,3 +58,5 @@ document.addEventListener('visibilitychange',refreshBg);
 const youtubeScript=document.createElement('script');youtubeScript.src='https://www.youtube.com/iframe_api';youtubeScript.async=true;youtubeScript.onerror=()=>{bgState(false);bgLabel.textContent='연혁에서 공연 영상을 만나보세요'};document.head.appendChild(youtubeScript);
 
 document.querySelectorAll('[data-back-to-top]').forEach(button=>button.addEventListener('click',()=>{const panel=button.closest('section');if(!panel)return;const nav=document.querySelector('nav');const offset=nav?nav.getBoundingClientRect().height:0;window.scrollTo({top:Math.max(0,window.scrollY+panel.getBoundingClientRect().top-offset-16),behavior:'instant'});}));
+// Post-festival survey invitation; shown on each page visit.
+(()=>{const dialog=document.getElementById('festival-survey-dialog');if(!dialog||typeof dialog.showModal!=='function')return;dialog.querySelector('.survey-close').addEventListener('click',()=>dialog.close());dialog.addEventListener('close',()=>document.documentElement.classList.remove('survey-modal-open'));dialog.showModal();document.documentElement.classList.add('survey-modal-open');})();
